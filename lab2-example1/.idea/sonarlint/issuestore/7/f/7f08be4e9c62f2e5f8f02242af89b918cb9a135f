@@ -1,0 +1,10 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(œı×õÿÿÿÿÿ8Œ±Ó.
+X	java:S125"<This block of commented-out lines of code should be removed.(™µØŠ8˜¥Ó.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(‰ÅÅ×8Œ±Ó.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¸¿ª8„Œ†Ó.
+X	java:S125"<This block of commented-out lines of code should be removed.(ğç…ë8„Ñ™Ó.
+F
+java:S1481")Remove this unused "cat4" local variable.(¾‚À‚8†û¶Ó.
+U
+java:S1854"8Remove this useless assignment to local variable "cat4".(¾‚À‚8†û¶Ó.
