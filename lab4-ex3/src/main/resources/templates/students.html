@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> FIRST NAME</th>
+        <th> LAST NAME</th>
+        <th> USERNAME</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${students.empty}">
+        <td colspan="5"> No students added yet!</td>
+    </tr>
+    <tr th:each="student : ${students}">
+        <td><span th:text="${student.firstName}"> firstName</span> </td>
+        <td><span th:text="${student.lastName}"> lastName</span> </td>
+        <td><span th:text="${student.username}"> username</span> </td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>
