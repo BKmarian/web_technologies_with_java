@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Customer Form</title>
+</head>
+<style>
+    span {
+        color: red;
+        font-style: italic;
+    }
+</style>
+<body>
+<h1>Enter customer info</h1>
+<form action="#" th:action="@{/customerregistration}" method="post" th:object="${customer}">
+    <label> Name of the customer:</label>
+    <input type="text" th:field="*{name}"/>
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">name error</span>
+    <br/>
+
+    <label> Email of the customer:</label>
+    <input type="text" th:field="*{email}"/>
+    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">email error</span>
+    <br/>
+
+    <label> Password of the customer:</label>
+    <input type="password" th:field="*{password}"/>
+    <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}">password error</span>
+    <br/>
+
+    <label>Age:</label>
+    <input type="number" th:field="*{age}"/>
+    <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age error</span>
+    <br/>
+
+    <label> Accept Terms & Cond</label>
+    <input type="checkbox" th:field="*{acceptTerms}"/>
+    <span th:if="${#fields.hasErrors('acceptTerms')}" th:errors="*{acceptTerms}">acceptTerms error</span>
+    <br/>
+
+    <label>Birthday:</label>
+    <input type="date" th:field="*{birthday}"/>
+    <span th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}">birthday error</span>
+    <br/>
+
+    <label> Choose your job</label>
+    <select th:field="*{job}">
+        <option th:each="jobValue : ${jobs}" th:value="${jobValue}" th:text="${jobValue}" /><span th:if="${#fields.hasErrors('job')}" th:errors="*{job}">job error</span>
+    </select>
+    <br/>
+
+    <button type="submit"> Register customer</button>
+</form>
+</body>
+</html>

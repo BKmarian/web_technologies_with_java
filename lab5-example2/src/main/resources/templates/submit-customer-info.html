@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Customer added</title>
+</head>
+<body>
+<h1>Info about the customer registered:</h1>
+<span> Name: </span> <p th:text="${customer.name}"></p><br/>
+<span> Email: </span> <p th:text="${customer.email}"></p><br/>
+<span> Age: </span> <p th:number="${customer.age}"></p><br/>
+<span>Birthday:</span><p th:text="${customer.birthday}"></p><br/>
+<span> Job: </span> <p th:number="${customer.job}"></p><br/>
+<span> Accepted: </span> <p th:text="${customer.acceptTerms} ? 'Yes' : 'No'"></p><br/>
+</body>
+</html>
